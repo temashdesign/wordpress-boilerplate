@@ -57,9 +57,9 @@ class Assets
         );
         wp_register_style(
             "woodstock-css",
-            WOODSTOCK_DIR_URI . "/assets/build/styles/app.css",
+            WOODSTOCK_DIR_URI . "/assets/styles/app.css",
             [],
-            filemtime(WOODSTOCK_DIR_PATH . "/assets/build/styles/app.css"),
+            filemtime(WOODSTOCK_DIR_PATH . "/assets/styles/app.css"),
             "all"
         );
 
@@ -87,21 +87,21 @@ class Assets
         // Register Scripts
         wp_register_script(
             "app-js",
-            WOODSTOCK_DIR_URI . "/assets/build/js/app.js",
+            WOODSTOCK_DIR_URI . "/assets/js/app.js",
             [],
-            filemtime(WOODSTOCK_DIR_PATH . "/assets/build/js/app.js"),
+            filemtime(WOODSTOCK_DIR_PATH . "/assets/js/app.js"),
             true
         );
         wp_register_script(
             "vendor-js",
-            WOODSTOCK_DIR_URI . "/assets/build/js/vendor.js",
+            WOODSTOCK_DIR_URI . "/assets/js/vendor.js",
             [],
-            filemtime(WOODSTOCK_DIR_PATH . "/assets/build/js/vendor.js"),
+            filemtime(WOODSTOCK_DIR_PATH . "/assets/js/vendor.js"),
             true
         );
 
         // Enqueue Scripts
-        wp_enqueue_script("jquery");
+        // wp_enqueue_script("jquery");
         wp_enqueue_script("app-js");
         wp_enqueue_script("vendor-js");
 
@@ -119,7 +119,7 @@ class Assets
     {
         $svg_icons_path =
             \get_template_directory() .
-            "/assets/build/images/svg-sprite/icons.svg";
+            "/assets/images/svg-sprite/icons.svg";
 
         if (file_exists($svg_icons_path)) {
             include_once $svg_icons_path;
