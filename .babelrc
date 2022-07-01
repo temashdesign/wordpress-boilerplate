@@ -1,8 +1,18 @@
 {
-  "presets": [
-    [
-      "@babel/preset-env",
-      { "debug": true, "useBuiltIns": "usage", "corejs": 3.23 }
+    "presets": [
+        // [
+        //   "@babel/preset-env",
+        //   { "debug": true, "useBuiltIns": "usage", "corejs": 3.23 }
+        // ],
+        [
+            "airbnb",
+            {
+                "targets": {
+                    "chrome": 50,
+                    "ie": 11,
+                    "firefox": 45
+                }
+            }
+        ]
     ]
-  ]
 }
