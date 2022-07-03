@@ -8,3 +8,7 @@ body {
     color: lch(53 105 40);
   }
 }
+
+.somediv {
+  @apply mt-5 pl-5 bg-slate-300;
+}
